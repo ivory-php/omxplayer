@@ -1,0 +1,30 @@
+{
+	"name": "ivory-php/omxplayer",
+	"version": "0.1.0",
+	"type": "library",
+	"keywords": ["raspberry pi", "pi", "system", "cli", "video", "video player", "omxplayer"],
+	"homepage": "https://ivory-php.github.io",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Ben Eckenroed",
+			"email": "ben@eckenroed.net",
+			"homepage": "http://www.punnyprogrammer.com",
+			"role": "developer"
+		}
+	],
+	"support": {
+		"issues": "https://github.com/ivory-php/omxplayer/issues",
+		"wiki": "https://github.com/ivory-php/omxplayer/wiki",
+		"source": "https://github.com/ivory-php/omxplayer",
+		"docs": "https://ivory-php.github.io"
+	},
+	"autoload": {
+		"psr-4": {
+			"Ivory\\": "src/"
+		}
+	},
+	"require" : {
+		"ivory-php/fbi": "0.1.*"
+	}
+}
