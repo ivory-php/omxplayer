@@ -66,14 +66,14 @@ class Omxplayer {
 	 */
 	public function hdmiAudioOut()
 	{
-		$this->selectedOptions[] = '-o hdmi';
+		$this->selectedOptions['o'] = 'hdmi';
 
 		return $this;
 	}
 
 	public function in3D()
 	{
-		$this->selectedOptions[] = '-3';
+		$this->selectedOptions['3'] = '';
 
 		return $this;
 	}
@@ -85,7 +85,7 @@ class Omxplayer {
 	 */
 	public function startAt(string $timestamp)
 	{
-		$this->selectedOptions[] = '-l ' + $timestamp;
+		$this->selectedOptions['l'] =  $timestamp;
 
 		return $this;
 	}
@@ -96,21 +96,21 @@ class Omxplayer {
 	 */
 	public function noOsd()
 	{
-		$this->selectedOptions[] = '--no-osd';
+		$this->selectedOptions['no-osd'] = '';
 
 		return $this;
 	}
 
 	public function loop()
 	{
-		$this->selectedOptions[] = '--loop';
+		$this->selectedOptions['loop'] = '';
 
 		return $this;
 	}
 
 	public function blackBackground()
 	{
-		$this->selectedOptions[] = '--blank';
+		$this->selectedOptions['blank'] = '';
 
 		return $this;
 	}
@@ -144,14 +144,12 @@ class Omxplayer {
 	protected function _compileOptions()
 	{
 		$compiled = '';
-
-		if( empty($this->selectedOptions) ) return $compiled;
-
-		foreach( $this->selectedOptions as $option ) :
-			$compiled.= ' ' . $option;
+		foreach( $this->options as $option => $value ) :
+			if( strlen($option) > 1 ) $compiled.= "--{$option} {$value}";
+			else $compiled.= "-{$option} {$value}";
 		endforeach;
 
-		return trim($compiled);
+		return $compiled;
 	}
 
 	/**
