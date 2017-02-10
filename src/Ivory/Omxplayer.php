@@ -44,7 +44,7 @@ class Omxplayer {
 		 * @var Fbi
 		 */
 		$this->imageBackground = (new Fbi)
-			->imageBackground->image( realpath(__FILE__) . '/assets/Black.png')
+			->image( realpath(__FILE__) . '/assets/Black.png')
 			->displayFor(0) // Display it until we are done with it
 			->withAutoZoom();
 	}

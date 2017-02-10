@@ -1,6 +1,6 @@
 {
 	"name": "ivory-php/omxplayer",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"type": "library",
 	"keywords": ["raspberry pi", "pi", "system", "cli", "video", "video player", "omxplayer"],
 	"homepage": "https://ivory-php.github.io",
