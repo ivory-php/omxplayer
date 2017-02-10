@@ -55,7 +55,7 @@ class Omxplayer {
 	 */
 	public function standard()
 	{
-		$this->nativeAudioOut()->noOsd()->blackBackground();
+		$this->noOsd()->blackBackground();
 
 		return $this;
 	}
