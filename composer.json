@@ -1,6 +1,6 @@
 {
 	"name": "ivory-php/omxplayer",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"type": "library",
 	"keywords": ["raspberry pi", "pi", "system", "cli", "video", "video player", "omxplayer"],
 	"homepage": "https://ivory-php.github.io",
@@ -21,10 +21,10 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"Ivory\\": "src/"
+			"Ivory\\": "src/Ivory/"
 		}
 	},
 	"require" : {
-		"ivory-php/fbi": "0.1.*"
+		"ivory-php/fbi": "^0.1"
 	}
 }
