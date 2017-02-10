@@ -158,7 +158,7 @@ class Omxplayer {
 	 */
 	public function videoLength()
 	{
-		$command = system('omxplayer -i ' . $this->video . ' /home/pi/omx.info 2>&1 || cat /home/pi/omx.info | grep "Duration:"');
+		$command = system('omxplayer -i ' . $this->file . ' /home/pi/omx.info 2>&1 || cat /home/pi/omx.info | grep "Duration:"');
 		$segments = explode(",", $command);
 		return trim(substr($segments[0], 10));
 	}
